@@ -40,7 +40,7 @@ Simply call the `scan` method, and we are good to go:
 final data = await Barras.scan(context);
 ```
 
-![Default barcode capture page](https://github.com/deadblit/barras/example/screenshots/Screenshot_20201022-034615.jpg)
+![Default barcode capture page](https://github.com/deadblit/barras/raw/main/example/screenshots/Screenshot_20201022-034615.jpg)
 
 You can also customize the appearance of the barcode capture page:
 
@@ -63,6 +63,6 @@ final data = await Barras.scan(
 );
 ```
 
-![Customized barcode capture page](https://github.com/deadblit/barras/example/screenshots/Screenshot_20201022-034726.jpg)
+![Customized barcode capture page](https://github.com/deadblit/barras/raw/main/example/screenshots/Screenshot_20201022-034726.jpg)
 
 You can check a working example app in the [example folder](https://github.com/deadblit/barras/example/lib/).
