@@ -47,11 +47,9 @@ import 'package:flutter/material.dart';
 import 'barcode_reader/barcode_reader_page.dart';
 
 class Barras {
-
   /// Opens the barcode scanning page and return scanned data or null if the
   /// Cancel button is pressed or if user dismisses the page.
   static Future<String> scan(
-
     /// The build context.
     BuildContext context, {
 
@@ -66,7 +64,7 @@ class Barras {
     /// The viewfinder cutout width.
     double viewfinderWidth = 240.0,
 
-     /// The viewfinder cutout height.
+    /// The viewfinder cutout height.
     double viewfinderHeight = 240.0,
 
     /// The viewfinder cutout border radius.
@@ -91,19 +89,20 @@ class Barras {
     bool successBeep = true,
   }) async {
     final String data = await Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => BarcodeReaderPage(
-        showBorder: showBorder,
-        borderFlashDuration: borderFlashDuration,
-        viewfinderWidth: viewfinderWidth,
-        viewfinderHeight: viewfinderHeight,
-        borderRadius: borderRadius,
-        scrimColor: scrimColor,
-        borderColor: borderColor,
-        borderStrokeWidth: borderStrokeWidth,
-        buttonColor: buttonColor,
-        cancelButtonText: cancelButtonText,
-        successBeep: successBeep,
-      )),
+      MaterialPageRoute(
+          builder: (context) => BarcodeReaderPage(
+                showBorder: showBorder,
+                borderFlashDuration: borderFlashDuration,
+                viewfinderWidth: viewfinderWidth,
+                viewfinderHeight: viewfinderHeight,
+                borderRadius: borderRadius,
+                scrimColor: scrimColor,
+                borderColor: borderColor,
+                borderStrokeWidth: borderStrokeWidth,
+                buttonColor: buttonColor,
+                cancelButtonText: cancelButtonText,
+                successBeep: successBeep,
+              )),
     );
 
     return data;
