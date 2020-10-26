@@ -1,6 +1,10 @@
 # Barras
 
-A simple and customizable barcode scanning Flutter package for Android and iOS. It uses AVCaptureSession in iOS and ZXing in Android.
+This document is also available in: **English** \| [Português](https://github.com/deadblit/barras/blob/main/README-pt_BR.md)
+
+---
+
+Barras is a simple and customizable barcode scanning Flutter package for Android and iOS. It uses AVCaptureSession in iOS and ZXing in Android.
 
 Please bear in mind that Barras is experimental, in early development stage.
 
@@ -23,7 +27,7 @@ Add Barras dependency to the `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  barras: ^0.0.1
+  barras: ^0.0.2
 ```
 
 Import it in your code:
