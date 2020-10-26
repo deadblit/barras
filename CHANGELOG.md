@@ -1,3 +1,8 @@
-## [0.0.1] - 22/10/2020
+## 0.0.2
+
+* Documented `Barras.scan()` method.
+* Added a Brazilian Portuguese README file.
+
+## 0.0.1
 
 * Initial release. Features barcode and QR code scanning on iOS and Android and capture screen customization.
