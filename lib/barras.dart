@@ -98,6 +98,7 @@ class Barras {
     final String data = await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => BarcodeReaderPage(
+          showBorder: showBorder,
           borderFlashDuration: borderFlashDuration,
           viewfinderWidth: viewfinderWidth,
           viewfinderHeight: viewfinderHeight,
