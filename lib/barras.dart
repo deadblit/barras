@@ -53,6 +53,14 @@ class Barras {
     /// The build context.
     BuildContext context, {
 
+    /// Show a border around the viewfinder cutout borders. If this parameter is
+    /// false, all other border configuration parameters will have no effect.
+    @Deprecated(
+      'This property will be computed based on the borderColor'
+      'This will be removed on a next release',
+    )
+        bool showBorder = true,
+
     /// The viewfinder border blinking speed, in milliseconds.
     /// Set to zero to disable the blinking effect.
     int borderFlashDuration = 500,

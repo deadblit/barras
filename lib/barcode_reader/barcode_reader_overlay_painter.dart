@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'dart:math' as Math;
 
 class BarcodeReaderOverlayPainter extends CustomPainter {
+  final bool drawBorder;
   final double viewfinderWidth;
   final double viewfinderHeight;
   final double borderRadius;
@@ -11,6 +12,7 @@ class BarcodeReaderOverlayPainter extends CustomPainter {
   final double borderStrokeWidth;
 
   BarcodeReaderOverlayPainter({
+    this.drawBorder = true,
     this.viewfinderWidth = 240.0,
     this.viewfinderHeight = 240.0,
     this.borderRadius = 16.0,
@@ -18,8 +20,6 @@ class BarcodeReaderOverlayPainter extends CustomPainter {
     this.borderColor = Colors.green,
     this.borderStrokeWidth = 4.0,
   });
-
-  bool get drawBorder => borderColor != null;
 
   @override
   void paint(Canvas canvas, Size size) {
