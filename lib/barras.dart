@@ -53,10 +53,6 @@ class Barras {
     /// The build context.
     BuildContext context, {
 
-    /// Show a border around the viewfinder cutout borders. If this parameter is
-    /// false, all other border configuration parameters will have no effect.
-    bool showBorder = true,
-
     /// The viewfinder border blinking speed, in milliseconds.
     /// Set to zero to disable the blinking effect.
     int borderFlashDuration = 500,
@@ -87,22 +83,26 @@ class Barras {
 
     /// Emit a beep sound when a barcode is scanned.
     bool successBeep = true,
+
+    /// Callback when the code is scanned
+    Function(String data) onScanned,
   }) async {
     final String data = await Navigator.of(context).push(
       MaterialPageRoute(
-          builder: (context) => BarcodeReaderPage(
-                showBorder: showBorder,
-                borderFlashDuration: borderFlashDuration,
-                viewfinderWidth: viewfinderWidth,
-                viewfinderHeight: viewfinderHeight,
-                borderRadius: borderRadius,
-                scrimColor: scrimColor,
-                borderColor: borderColor,
-                borderStrokeWidth: borderStrokeWidth,
-                buttonColor: buttonColor,
-                cancelButtonText: cancelButtonText,
-                successBeep: successBeep,
-              )),
+        builder: (context) => BarcodeReaderPage(
+          borderFlashDuration: borderFlashDuration,
+          viewfinderWidth: viewfinderWidth,
+          viewfinderHeight: viewfinderHeight,
+          borderRadius: borderRadius,
+          scrimColor: scrimColor,
+          borderColor: borderColor,
+          borderStrokeWidth: borderStrokeWidth,
+          buttonColor: buttonColor,
+          cancelButtonText: cancelButtonText,
+          successBeep: successBeep,
+          onScanned: onScanned,
+        ),
+      ),
     );
 
     return data;

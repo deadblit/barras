@@ -8,20 +8,19 @@ import 'package:torch_compat/torch_compat.dart';
 import 'barcode_reader_overlay_painter.dart';
 
 class BarcodeReaderPage extends StatefulWidget {
-  final showBorder;
-  final borderFlashDuration;
-  final viewfinderWidth;
-  final viewfinderHeight;
-  final borderRadius;
-  final scrimColor;
-  final borderColor;
-  final borderStrokeWidth;
-  final buttonColor;
-  final cancelButtonText;
-  final successBeep;
+  final int borderFlashDuration;
+  final double viewfinderWidth;
+  final double viewfinderHeight;
+  final double borderRadius;
+  final Color scrimColor;
+  final Color borderColor;
+  final double borderStrokeWidth;
+  final Color buttonColor;
+  final String cancelButtonText;
+  final bool successBeep;
+  final Function(String data) onScanned;
 
   BarcodeReaderPage({
-    this.showBorder = true,
     this.borderFlashDuration = 500,
     this.viewfinderWidth = 240.0,
     this.viewfinderHeight = 240.0,
@@ -32,7 +31,10 @@ class BarcodeReaderPage extends StatefulWidget {
     this.buttonColor = Colors.white,
     this.cancelButtonText = "Cancel",
     this.successBeep = true,
+    @required this.onScanned,
   });
+
+  bool get showBorder => borderColor != null;
 
   @override
   _BarcodeReaderPageState createState() => _BarcodeReaderPageState();
@@ -76,6 +78,9 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
       if (widget.successBeep) {
         FlutterBeep.beep();
       }
+      if (widget.onScanned != null) {
+        widget.onScanned(data);
+      }
       Navigator.of(context).pop(data);
     });
   }
@@ -110,7 +115,6 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
     return CustomPaint(
       size: MediaQuery.of(context).size,
       painter: BarcodeReaderOverlayPainter(
-        drawBorder: _isBorderVisible,
         viewfinderWidth: widget.viewfinderWidth,
         viewfinderHeight: widget.viewfinderHeight,
         borderRadius: widget.borderRadius,
