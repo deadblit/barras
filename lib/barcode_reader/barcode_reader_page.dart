@@ -80,8 +80,9 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
       }
       if (widget.onScanned != null) {
         widget.onScanned(data);
+      } else {
+        Navigator.of(context).pop(data);
       }
-      Navigator.of(context).pop(data);
     });
   }
 
