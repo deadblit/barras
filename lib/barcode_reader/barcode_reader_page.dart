@@ -8,17 +8,17 @@ import 'package:torch_compat/torch_compat.dart';
 import 'barcode_reader_overlay_painter.dart';
 
 class BarcodeReaderPage extends StatefulWidget {
-  final showBorder;
-  final borderFlashDuration;
-  final viewfinderWidth;
-  final viewfinderHeight;
-  final borderRadius;
-  final scrimColor;
-  final borderColor;
-  final borderStrokeWidth;
-  final buttonColor;
-  final cancelButtonText;
-  final successBeep;
+  final bool showBorder;
+  final int borderFlashDuration;
+  final double viewfinderWidth;
+  final double viewfinderHeight;
+  final double borderRadius;
+  final Color scrimColor;
+  final Color borderColor;
+  final double borderStrokeWidth;
+  final Color buttonColor;
+  final String cancelButtonText;
+  final bool successBeep;
 
   BarcodeReaderPage({
     this.showBorder = true,
@@ -44,7 +44,7 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
   bool _hasTorch = false;
   bool _isTorchOn = false;
   bool _isBorderVisible = false;
-  Timer _borderFlashTimer;
+  Timer? _borderFlashTimer;
 
   @override
   void initState() {
@@ -82,7 +82,7 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
 
   @override
   void dispose() {
-    _borderFlashTimer.cancel();
+    _borderFlashTimer?.cancel();
     super.dispose();
   }
 
