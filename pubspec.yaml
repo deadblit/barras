@@ -11,8 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  qrcode: ^1.0.4
-  torch_compat: ^1.0.2
+  qrcode_forked: ^1.0.0
+  torch_controller: ^0.4.1
   flutter_beep: ^1.0.0
 
 dev_dependencies:

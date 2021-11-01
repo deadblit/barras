@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_beep/flutter_beep.dart';
-import 'package:qrcode/qrcode.dart';
-import 'package:torch_compat/torch_compat.dart';
+import 'package:qrcode_forked/qrcode_forked.dart';
+import 'package:torch_controller/torch_controller.dart';
 
 import 'barcode_reader_overlay_painter.dart';
 
@@ -64,10 +64,9 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
         });
       }
     }
-
-    TorchCompat.hasTorch.then((value) {
+    TorchController().hasTorch.then((value) {
       setState(() {
-        _hasTorch = value;
+        _hasTorch = value ?? false;
       });
     });
 
