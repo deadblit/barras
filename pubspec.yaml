@@ -13,7 +13,7 @@ dependencies:
 
   qrcode: ^1.0.4
   torch_compat: ^1.0.2
-  flutter_beep: ^0.2.0
+  flutter_beep: ^1.0.0
 
 dev_dependencies:
   flutter_test:
