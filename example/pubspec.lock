@@ -14,7 +14,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.1.0-nullsafety.1"
+    version: "0.1.0-nullsafety.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -159,10 +159,12 @@ packages:
   torch_controller:
     dependency: transitive
     description:
-      name: torch_controller
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.1"
+      path: "packages/torch_controller"
+      ref: "bugfix/android_embedding_v2"
+      resolved-ref: b12c396bc0a586a42e97abc1dfd827d7b708ad9e
+      url: "https://github.com/deadblit/opensource_qwkin_dart"
+    source: git
+    version: "0.4.2-embedding-v2"
   typed_data:
     dependency: transitive
     description:
