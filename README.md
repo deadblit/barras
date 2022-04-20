@@ -10,16 +10,18 @@ Please bear in mind that Barras is experimental, in early development stage.
 
 ## Getting Started
 
-### iOS specific setup
+### Requirements
 
-You'll need to configure the camera usage permission message and embed view previews in the `Info.plist` file:
+Barras requires camera usage permission, on both iOS and Android. This must be implemented by you,
+considering any alternatives that you may be already using for user permission requests.
 
-```xml
-<key>NSCameraUsageDescription</key>
-<string>Camera permission is required for barcode scanning.</string>
-<key>io.flutter.embedded_views_preview</key>
-<true/>
-```
+If you are not handling permissions yet, there are good plugins to do it, like [permission_handler](https://pub.dev/packages/permission_handler).
+
+Besides that, Barras depends on the following:
+
+- Flutter 2.2.3 or higher
+- Android API 26 (Marshmallow) or newer
+- iOS 9.0 or newer
 
 ### Import and use in your code
 
@@ -27,7 +29,7 @@ Add Barras dependency to the `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  barras: ^0.0.2
+  barras: ^0.1.0-nullsafety.1
 ```
 
 Import it in your code:

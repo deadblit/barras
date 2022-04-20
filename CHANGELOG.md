@@ -1,3 +1,8 @@
+## 0.1.0-nullsafety.1
+
+* Implemented Null Safety.
+* Clarified how camera permission handling affects Barras.
+
 ## 0.0.2
 
 * Documented `Barras.scan()` method.
