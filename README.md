@@ -29,7 +29,7 @@ Add Barras dependency to the `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  barras: ^0.0.3
+  barras: ^0.1.0-nullsafety.1
 ```
 
 Import it in your code:

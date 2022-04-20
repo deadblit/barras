@@ -2,15 +2,11 @@
 ///
 /// Barras uses ZXing on Android and AVCapture on iOS.
 ///
-/// You'll need to configure the camera usage permission message and embed views
-/// preview in the `Info.plist` file:
+/// You'll need to handle the camera usage permission. This is out of the scope
+/// of this plugin, since applications may already have permission handling. If
+/// that is not the case, you can use a plugin like
+/// [permission_handler](https://pub.dev/packages/permission_handler).
 ///
-/// ```xml
-/// <key>NSCameraUsageDescription</key>
-/// <string>Camera permission is required for barcode scanning.</string>
-/// <key>io.flutter.embedded_views_preview</key>
-/// <true/>
-/// ```
 /// Using Barras is straightforward. Just call the `scan` method and wait for
 /// the scanned result:
 ///

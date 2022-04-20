@@ -31,7 +31,7 @@ Adicione a dependência da Barras no seu arquivo `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  barras: ^0.0.3
+  barras: ^0.1.0-nullsafety.1
 ```
 
 Importe no seu código:
