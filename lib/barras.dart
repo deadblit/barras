@@ -49,7 +49,7 @@ import 'barcode_reader/barcode_reader_page.dart';
 class Barras {
   /// Opens the barcode scanning page and return scanned data or null if the
   /// Cancel button is pressed or if user dismisses the page.
-  static Future<String> scan(
+  static Future<String?> scan(
     /// The build context.
     BuildContext context, {
 
@@ -88,7 +88,7 @@ class Barras {
     /// Emit a beep sound when a barcode is scanned.
     bool successBeep = true,
   }) async {
-    final String data = await Navigator.of(context).push(
+    final String? data = await Navigator.of(context).push(
       MaterialPageRoute(
           builder: (context) => BarcodeReaderPage(
                 showBorder: showBorder,
