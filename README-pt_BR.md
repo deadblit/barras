@@ -10,16 +10,20 @@ Por favor lembre-se de que Barras é um pacote experimental, em estágio de dese
 
 ## Começando
 
-### Configuração específica para iOS
+### Requisitos
 
-É necessário configurar a mensagem para solicitar permissão de uso da camera e o parâmetro _embed view previews_ no arquivo `Info.plist`:
+O Barras precisa da permissão para uso da camera, tanto no iOS quanto no Android. Este tratamento precisa
+ser implementado por você, considerando as alternativas que você possivelmente já pode estar usando
+para solicitar permissões para o usuário.
 
-```xml
-<key>NSCameraUsageDescription</key>
-<string>O app precisa acessar a camera para detectar códigos de barra.</string>
-<key>io.flutter.embedded_views_preview</key>
-<true/>
-```
+Se você ainda não está tratando permissões, existem plugins bons para fazer o tratamento, 
+como o [permission_handler](https://pub.dev/packages/permission_handler).
+
+Além disso, Barras depende do seguinte:
+
+- Flutter 2.2.3 ou mais recente
+- Android API 26 (Marshmallow) ou mais recente
+- iOS 9.0 ou mais recente
 
 ### Importe e utilize no seu código
 
@@ -27,7 +31,7 @@ Adicione a dependência da Barras no seu arquivo `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  barras: ^0.0.2
+  barras: ^0.0.3
 ```
 
 Importe no seu código:

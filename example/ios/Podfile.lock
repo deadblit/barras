@@ -2,33 +2,33 @@ PODS:
   - Flutter (1.0.0)
   - flutter_beep (0.0.1):
     - Flutter
-  - qrcode (0.0.1):
+  - qrcode_forked (0.0.1):
     - Flutter
-  - torch_compat (0.0.1):
+  - torch_controller (0.1.2):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_beep (from `.symlinks/plugins/flutter_beep/ios`)
-  - qrcode (from `.symlinks/plugins/qrcode/ios`)
-  - torch_compat (from `.symlinks/plugins/torch_compat/ios`)
+  - qrcode_forked (from `.symlinks/plugins/qrcode_forked/ios`)
+  - torch_controller (from `.symlinks/plugins/torch_controller/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
   flutter_beep:
     :path: ".symlinks/plugins/flutter_beep/ios"
-  qrcode:
-    :path: ".symlinks/plugins/qrcode/ios"
-  torch_compat:
-    :path: ".symlinks/plugins/torch_compat/ios"
+  qrcode_forked:
+    :path: ".symlinks/plugins/qrcode_forked/ios"
+  torch_controller:
+    :path: ".symlinks/plugins/torch_controller/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   flutter_beep: 54fb393b22dfa0f0e4573c81b1c74dd71c4e5af8
-  qrcode: 703d52352679d9b4284555e9a09c2157062f1989
-  torch_compat: 4bdf81e976740fb92263dad3472666bb58aceca4
+  qrcode_forked: 29fb841ce02e39e4760247a3cde082651620336f
+  torch_controller: b9e6c3deaf9a6092aad39e48d3e0210e573f2505
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.2
