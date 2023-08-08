@@ -64,15 +64,13 @@ class _HomePageState extends State<HomePage> {
   Widget _buildDefaultScanButton(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.blueAccent,
-        onPrimary: Colors.white,
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
       ),
       onPressed: () async {
-
         // Open the barcode reading page. Returned data will be null if
         // Cancel button is pressed, or if user navigates back
         final data = await Barras.scan(context);
-
         setState(() {
           _scannedCode = data ?? "";
         });
@@ -85,11 +83,10 @@ class _HomePageState extends State<HomePage> {
   Widget _buildCustomScanButton(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.deepPurple,
-        onPrimary: Colors.white,
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
       ),
       onPressed: () async {
-
         // Open the barcode reading page. Customize the appearance, changing the
         // viewfinder color, size and blinking speed. Returned data will be null
         // if Cancel button is pressed, or if user navigates back
@@ -115,5 +112,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
