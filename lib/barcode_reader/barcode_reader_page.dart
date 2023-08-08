@@ -69,8 +69,8 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
 
   @override
   void dispose() {
-    _borderFlashTimer?.cancel();
     _captureController.dispose();
+    _borderFlashTimer?.cancel();
     super.dispose();
   }
 
@@ -90,11 +90,10 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
 
   Widget _buildCaptureView() {
     return MobileScanner(
-      onDetect: (barcodes) {
-        if (widget.successBeep) {
-          FlutterBeep.beep();
-          Navigator.of(context).pop(barcodes.barcodes.first.rawValue);
-        }
+      onDetect: (barcodes) async {
+        await _captureController.stop();
+        if (widget.successBeep) FlutterBeep.beep();
+        Navigator.of(context).pop(barcodes.barcodes.first.rawValue);
       },
       controller: _captureController,
     );

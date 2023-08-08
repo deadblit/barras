@@ -4,13 +4,12 @@ version: 1.0.0
 homepage: https://github.com/deadblit/barras
 
 environment:
-  sdk: ">=2.13.4 <3.0.0"
-  flutter: ">=2.2.3"
+  sdk: ">=2.17.0 <4.0.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-
   flutter_beep: ^1.0.0
   mobile_scanner: ^3.4.1
 
