@@ -1,6 +1,6 @@
 name: barras
 description: A simple and customizable barcode scanning package for Android and iOS. It uses AVCaptureSession in iOS and ZXing in Android.
-version: 0.2.0
+version: 0.2.1
 homepage: https://github.com/deadblit/barras
 
 environment:
