@@ -21,7 +21,7 @@ como o [permission_handler](https://pub.dev/packages/permission_handler).
 
 Além disso, Barras depende do seguinte:
 
-- Flutter 2.2.3 ou mais recente
+- Flutter 2.10.5 ou mais recente
 - Android API 26 (Marshmallow) ou mais recente
 - iOS 9.0 ou mais recente
 
@@ -31,7 +31,7 @@ Adicione a dependência da Barras no seu arquivo `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  barras: ^0.1.0-nullsafety.1
+  barras: ^0.2.1
 ```
 
 Importe no seu código:
