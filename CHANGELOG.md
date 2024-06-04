@@ -1,3 +1,7 @@
+## 0.2.0
+
+* Updates dependencies.
+
 ## 0.1.0-nullsafety.1
 
 * Implemented Null Safety.

@@ -48,7 +48,6 @@ class Barras {
   static Future<String?> scan(
     /// The build context.
     BuildContext context, {
-
     /// Show a border around the viewfinder cutout borders. If this parameter is
     /// false, all other border configuration parameters will have no effect.
     bool showBorder = true,
@@ -86,19 +85,20 @@ class Barras {
   }) async {
     final String? data = await Navigator.of(context).push(
       MaterialPageRoute(
-          builder: (context) => BarcodeReaderPage(
-                showBorder: showBorder,
-                borderFlashDuration: borderFlashDuration,
-                viewfinderWidth: viewfinderWidth,
-                viewfinderHeight: viewfinderHeight,
-                borderRadius: borderRadius,
-                scrimColor: scrimColor,
-                borderColor: borderColor,
-                borderStrokeWidth: borderStrokeWidth,
-                buttonColor: buttonColor,
-                cancelButtonText: cancelButtonText,
-                successBeep: successBeep,
-              )),
+        builder: (context) => BarcodeReaderPage(
+          showBorder: showBorder,
+          borderFlashDuration: borderFlashDuration,
+          viewfinderWidth: viewfinderWidth,
+          viewfinderHeight: viewfinderHeight,
+          borderRadius: borderRadius,
+          scrimColor: scrimColor,
+          borderColor: borderColor,
+          borderStrokeWidth: borderStrokeWidth,
+          buttonColor: buttonColor,
+          cancelButtonText: cancelButtonText,
+          successBeep: successBeep,
+        ),
+      ),
     );
 
     return data;
