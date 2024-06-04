@@ -57,11 +57,15 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
 
       if (widget.borderFlashDuration > 0) {
         _borderFlashTimer = Timer.periodic(
-            Duration(milliseconds: widget.borderFlashDuration), (timer) {
-          setState(() {
-            _isBorderVisible = !_isBorderVisible;
-          });
-        });
+          Duration(milliseconds: widget.borderFlashDuration),
+          (timer) {
+            setState(
+              () {
+                _isBorderVisible = !_isBorderVisible;
+              },
+            );
+          },
+        );
       }
     }
     TorchController().hasTorch.then((value) {
@@ -156,7 +160,7 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
               });
             },
           )
-        : Container(
+        : SizedBox(
             width: 10,
             height: 10,
           );

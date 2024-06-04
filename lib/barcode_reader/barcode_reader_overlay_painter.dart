@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'dart:math' as Math;
 
+import 'package:flutter/material.dart';
+
 class BarcodeReaderOverlayPainter extends CustomPainter {
-  final drawBorder;
-  final viewfinderWidth;
-  final viewfinderHeight;
-  final borderRadius;
-  final scrimColor;
-  final borderColor;
-  final borderStrokeWidth;
+  final bool drawBorder;
+  final double viewfinderWidth;
+  final double viewfinderHeight;
+  final double borderRadius;
+  final Color scrimColor;
+  final Color borderColor;
+  final double borderStrokeWidth;
 
   BarcodeReaderOverlayPainter({
     this.drawBorder = true,
