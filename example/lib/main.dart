@@ -1,12 +1,14 @@
 import 'package:barras/barras.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(App());
+void main() => runApp(const App());
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: "Barras reader",
       home: HomePage(),
     );
@@ -14,21 +16,23 @@ class App extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> {
   String _scannedCode = "";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Barras Sample App"),
+        title: const Text("Barras Sample App"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
@@ -50,12 +54,14 @@ class _HomePageState extends State<HomePage> {
         border: Border.all(color: Colors.deepPurple),
         borderRadius: BorderRadius.circular(16.0),
       ),
-      height: 48.0,
-      padding: EdgeInsets.all(16.0),
-      margin: EdgeInsets.only(bottom: 8.0),
+      height: 224.0,
+      padding: const EdgeInsets.all(16.0),
+      margin: const EdgeInsets.only(bottom: 8.0),
       child: Text(
         _scannedCode,
         textAlign: TextAlign.center,
+        maxLines: 4,
+        softWrap: true,
       ),
     );
   }
@@ -64,11 +70,10 @@ class _HomePageState extends State<HomePage> {
   Widget _buildDefaultScanButton(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.blueAccent,
-        onPrimary: Colors.white,
+        foregroundColor: Colors.blueAccent,
+        backgroundColor: Colors.white,
       ),
       onPressed: () async {
-
         // Open the barcode reading page. Returned data will be null if
         // Cancel button is pressed, or if user navigates back
         final data = await Barras.scan(context);
@@ -77,7 +82,7 @@ class _HomePageState extends State<HomePage> {
           _scannedCode = data ?? "";
         });
       },
-      child: Text('OPEN DEFAULT SCANNER'),
+      child: const Text('OPEN DEFAULT SCANNER'),
     );
   }
 
@@ -85,11 +90,10 @@ class _HomePageState extends State<HomePage> {
   Widget _buildCustomScanButton(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.deepPurple,
-        onPrimary: Colors.white,
+        foregroundColor: Colors.deepPurple,
+        backgroundColor: Colors.white,
       ),
       onPressed: () async {
-
         // Open the barcode reading page. Customize the appearance, changing the
         // viewfinder color, size and blinking speed. Returned data will be null
         // if Cancel button is pressed, or if user navigates back
@@ -97,7 +101,7 @@ class _HomePageState extends State<HomePage> {
           context,
           viewfinderHeight: 120,
           viewfinderWidth: 300,
-          scrimColor: Color.fromRGBO(128, 0, 0, 0.5),
+          scrimColor: const Color.fromRGBO(128, 0, 0, 0.5),
           borderColor: Colors.red,
           borderRadius: 24,
           borderStrokeWidth: 2,
@@ -111,9 +115,7 @@ class _HomePageState extends State<HomePage> {
           _scannedCode = data ?? "";
         });
       },
-      child: Text('OPEN CUSTOMIZED SCANNER'),
+      child: const Text('OPEN CUSTOMIZED SCANNER'),
     );
   }
 }
-
-

@@ -24,11 +24,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/torch_controller/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_beep: 54fb393b22dfa0f0e4573c81b1c74dd71c4e5af8
   qrcode_forked: 29fb841ce02e39e4760247a3cde082651620336f
   torch_controller: b9e6c3deaf9a6092aad39e48d3e0210e573f2505
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: c4c93c5f6502fe2754f48404d3594bf779584011
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.0
