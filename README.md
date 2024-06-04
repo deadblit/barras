@@ -19,7 +19,7 @@ If you are not handling permissions yet, there are good plugins to do it, like [
 
 Besides that, Barras depends on the following:
 
-- Flutter 2.2.3 or higher
+- Flutter 2.10.5 or higher
 - Android API 26 (Marshmallow) or newer
 - iOS 9.0 or newer
 
@@ -29,7 +29,7 @@ Add Barras dependency to the `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  barras: ^0.1.0-nullsafety.1
+  barras: ^0.2.1
 ```
 
 Import it in your code:
