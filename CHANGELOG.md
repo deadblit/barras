@@ -1,3 +1,7 @@
+## 0.2.1
+
+* Rollback Flutter to 2.10.5.
+
 ## 0.2.0
 
 * Updates dependencies.
